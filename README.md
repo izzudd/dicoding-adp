@@ -10,10 +10,10 @@ pip install -r requirements.txt
 ## Prepare Dataset
 ```bash
 gdown 1RaBmV6Q6FYWU4HWZs80Suqd7KQC34diQ -O dataset.zip
-unzip dataset.zip -d dataset
+unzip dataset.zip -d data
 ```
 
 ## Run steamlit app
 ```bash
-streamlit run main.py
+streamlit run dashboard/dashboard.py
 ```

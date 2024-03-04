@@ -29,13 +29,13 @@ sns.set_theme()
 # ### Gathering Data
 
 # %%
-!rm -rf dataset
+!rm -rf data
 !gdown 1RaBmV6Q6FYWU4HWZs80Suqd7KQC34diQ -O dataset.zip
-!unzip dataset.zip -d dataset
+!unzip dataset.zip -d data
 !rm dataset.zip
 
 # %%
-df = pd.read_csv('dataset/hour.csv')
+df = pd.read_csv('data/hour.csv')
 
 # %% [markdown]
 # ### Assessing Data

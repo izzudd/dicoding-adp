@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
+import os
 
 from pandas.api.types import CategoricalDtype
 
 def prepare_dataset():
-  df = pd.read_csv('dataset/hour.csv')
+  df = pd.read_csv(os.path.join(os.getcwd(), 'dashboard', 'main_data.csv'))
   cat_weekday = CategoricalDtype(categories=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], ordered=True)
   cat_season = CategoricalDtype(categories=['winter', 'spring', 'summer', 'fall'], ordered=True)
   cat_month = CategoricalDtype(categories=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], ordered=True)
@@ -28,10 +29,10 @@ def prepare_dataset():
 
 dataset = prepare_dataset()
 
-from dashboard.daily_rides import daily_rides
-from dashboard.hourly_rides import hourly_rides
-from dashboard.seasonal_scatter import seasonal_scatter
-from dashboard.alltime_stats import alltime_stats
+from daily_rides import daily_rides
+from hourly_rides import hourly_rides
+from seasonal_scatter import seasonal_scatter
+from alltime_stats import alltime_stats
 
 st.write("""
 # Bike Sharing Dataset Dashboard 🚀
