@@ -1,1 +1,1 @@
-https://izzudd-bangkit-adp.streamlit.app
+https://izzudd-dicoding-adp.streamlit.app

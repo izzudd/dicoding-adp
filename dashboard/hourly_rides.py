@@ -20,11 +20,11 @@ def hourly_rides(dataset):
 
   filtered_day = all_day_cnt[all_day_cnt['dteday'] == str(date)]
   melted_filtered_day = filtered_day[['hr', 'casual', 'registered', 'cnt']].rename(columns={
-    'hr': 'time',
+    'hr': 'time (24 hour)',
     'cnt': 'total',
   })
   
-  plot = px.line(melted_filtered_day, x='time', y=['casual', 'registered', 'total'])
+  plot = px.line(melted_filtered_day, x='time (24 hour)', y=['casual', 'registered', 'total'])
 
   col1, col2, col3 = st.columns(3)
   with col1:
