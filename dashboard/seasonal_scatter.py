@@ -10,7 +10,7 @@ def seasonal_scatter(dataset):
   
   col1, col2 = st.columns(2)
   with col1:
-    st.subheader('Seasonal Scatter 🧨')
+    st.subheader('Seasonal Cluster 🧨')
   with col2:
     filter_opts = st.selectbox('Influenced by', ['humidity', 'windspeed', 'temperature'], index=2)
 
